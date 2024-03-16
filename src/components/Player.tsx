@@ -48,7 +48,7 @@ const Player = ({ mode }: PlayerType) => {
             if(mode === 'category') {
                 const newQueue = [ ...queue ]
                 newQueue.shift()
-                const newStrategem: any = getRandomStratagemByCategory(category)
+                const newStrategem: any = getRandomStratagemByCategory(category.replaceAll("%20", " "))
                 newQueue.push(newStrategem)
                 
                 setQueue((_:any) => [ ...newQueue ])
@@ -91,7 +91,7 @@ const Player = ({ mode }: PlayerType) => {
         else if(mode === "category") {
             const strats: any[] = []
             for(let i = 0; i < 5; i++)
-                strats.push(getRandomStratagemByCategory(category))
+                strats.push(getRandomStratagemByCategory(category.replaceAll("%20", " ")))
             setQueue((_: any) => [ ...strats ])
         }
         else if(mode === "classic") {
