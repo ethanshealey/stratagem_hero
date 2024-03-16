@@ -13,7 +13,7 @@ export default function Practice() {
     useEffect(() => {
         // load categories
         const listOfCategories = [...new Set(stratagemJson.map(item => item.category))]
-        console.log(listOfCategories)
+        
         setOptions(listOfCategories)
     }, [])
 

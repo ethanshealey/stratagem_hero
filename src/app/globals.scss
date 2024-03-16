@@ -28,6 +28,9 @@ html, body {
 header {
     background-color: $foreground;
     margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     #header-left {
         padding-left: 25px;
         display: flex;
@@ -60,6 +63,31 @@ header {
                 opacity: 75%;
                 font-weight: 100 !important;
                 font-size: 20px;
+            }
+        }
+    }
+    #header-right {
+        padding-right: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1 1 auto;
+        button {
+            background-color: $background;
+            border: 2px solid $background;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 15px;
+            color: $text;
+            cursor: pointer;
+            transition: .5s;
+            &:hover {
+                opacity: 75%;
             }
         }
     }
@@ -170,11 +198,46 @@ header {
             font-size: 25px;
             padding: 5px;
         }
-        // .correct {
-        //     color: $yellow
-        // }
-        // .fail {
-        //     color: red !important;
-        // }
+    }
+}
+
+#how-to-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #how-to-page-title {
+        color: $text;
+        text-align: center;
+        font-family: $font;
+        h1 {
+            font-size: 55px;
+        }
+        p {
+            font-weight: 100;
+            margin-top: -50px;
+            opacity: 60%;
+        }
+    }
+    section {
+        color: $text;
+        text-align: center;
+        border-top: thin solid $text;
+        width: 500px;
+        h2 {
+            font-weight: 700;
+        }
+        p {
+            margin-top: -27px;
+            a {
+                color: $text;
+                &:visited {
+                    color: $yellow
+                }
+            }
+        }
+    }
+    .option {
+        cursor: pointer
     }
 }

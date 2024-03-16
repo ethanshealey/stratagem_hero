@@ -48,7 +48,7 @@ const Player = ({ mode }: PlayerType) => {
                 newQueue.shift()
                 const newStrategem: any = getRandomStratagemByCategory(category)
                 newQueue.push(newStrategem)
-                console.log(newQueue)
+                
                 setQueue((_:any) => [ ...newQueue ])
             }
             else if(mode === "classic") {
@@ -56,7 +56,7 @@ const Player = ({ mode }: PlayerType) => {
                 newQueue.shift()
                 const newStrategem: any = getRandomStratagem()
                 newQueue.push(newStrategem)
-                console.log(newQueue)
+                
                 setQueue((_:any) => [ ...newQueue ])
             }
 
@@ -108,7 +108,7 @@ const Player = ({ mode }: PlayerType) => {
 
     const success = async () => {
         setSucceded((_: any) => true)
-        await sleep(500)
+        await sleep(200)
         setSucceded((_: any) => false)
     }
       

@@ -6,8 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Stratagem Trainer',
-  description: 'A ',
-  icons: [ 'logo.png' ]
+  description: 'A fun nextjs based game that simulates the arcade game "Stratagem Hero" from the video game "Helldivers 2"',
 }
 
 export default function RootLayout({
