@@ -5,6 +5,9 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Stratagem Trainer',
   description: 'A fun nextjs based game that simulates the arcade game "Stratagem Hero" from the video game "Helldivers 2"',
+  icons: {
+    icon: '/favicon.ico'
+  }
 }
 
 export default function RootLayout({

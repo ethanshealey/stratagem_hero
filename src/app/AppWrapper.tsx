@@ -10,10 +10,6 @@ const AppWrapper = ({
 
     const isMobile = useIsMobile()
 
-    useEffect(() => {
-        console.log(isMobile)
-    }, [isMobile])
-
     if(isMobile) return (
         <div id="mobile-error">
             <h1>Please use a Desktop/Laptop to view this site</h1>
