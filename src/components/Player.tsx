@@ -14,7 +14,7 @@ type PlayerType = {
     mode: 'practice' | 'category' | 'classic'
 }
 
-const START_TIMER = 5
+const START_TIMER = 3
 
 const Player = ({ mode }: PlayerType) => {
 
@@ -119,13 +119,13 @@ const Player = ({ mode }: PlayerType) => {
     }
 
     const playClickSound = () => {
-        const audio = new Audio('audio/click_sound.mp3');
+        const audio = new Audio('/audio/click_sound.mp3');
         audio.volume = 1
         audio.play();
     }
 
     const playSuccessSound = () => {
-        const audio = new Audio('audio/success_sound.mp3');
+        const audio = new Audio('/audio/success_sound.mp3');
         audio.volume = 1
         audio.play();
     }
