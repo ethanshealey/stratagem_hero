@@ -29,6 +29,9 @@ const Player = ({ mode }: PlayerType) => {
 
     useKeyDown((key: string) => {
         const mappedKey = mapKey(key)
+
+        playClickSound()
+
         if(mappedKey === currentArrow) {
             setCurrentCorrectCount(c => c+1)
         }
@@ -109,9 +112,22 @@ const Player = ({ mode }: PlayerType) => {
     }
 
     const success = async () => {
+        playSuccessSound()
         setSucceded((_: any) => true)
         await sleep(200)
         setSucceded((_: any) => false)
+    }
+
+    const playClickSound = () => {
+        const audio = new Audio('audio/click_sound.mp3');
+        audio.volume = 1
+        audio.play();
+    }
+
+    const playSuccessSound = () => {
+        const audio = new Audio('audio/success_sound.mp3');
+        audio.volume = 1
+        audio.play();
     }
       
     return (
