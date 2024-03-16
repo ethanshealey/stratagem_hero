@@ -17,6 +17,7 @@ const AppWrapper = ({
     if(isMobile) return (
         <div id="mobile-error">
             <h1>Please use a Desktop/Laptop to view this site</h1>
+            <p>Why? This site utilizes the WASD/Arrow keys to input the Stratagems</p>
         </div>
     )
 
