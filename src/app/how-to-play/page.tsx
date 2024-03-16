@@ -35,6 +35,10 @@ const HowToPlay = () => {
           <h2>Classic</h2>
           <p>In Classic mode, you will have absolutely NO control over what stratagems will appear! Meant to replicate what is seen in the Helldivers II Stratagem Hero rcade game, you will be barraged with infinite stratagems to enter!</p>
         </section>
+        <section id="classic">
+          <h2>Controls</h2>
+          <p>Now that you have picked your gamemode, it's time to get to action! Use WASD or your arrow keys to enter in the displayed code, if you mess up, you have to restart!</p>
+        </section>
         <div className='option' onClick={goHome}><h3>Get Back in Action</h3></div>
       </div>
     </div>
