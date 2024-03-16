@@ -14,10 +14,12 @@ type PlayerType = {
     mode: 'practice' | 'category' | 'classic'
 }
 
+const START_TIMER = 5
+
 const Player = ({ mode }: PlayerType) => {
 
     const [ start, setStart ] = useState<boolean>(false)
-    const [ beginTimer, setBeginTimer ] = useState<number>(1)
+    const [ beginTimer, setBeginTimer ] = useState<number>(START_TIMER)
     const [ queue, setQueue ] = useState<Stratagem[]>([])
     const [ currentArrow, setCurrentArrow ] = useState<string>()
     const [ currentCorrectCount, setCurrentCorrectCount ] = useState<number>(0)
